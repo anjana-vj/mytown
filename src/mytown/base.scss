@@ -1,0 +1,114 @@
+@import "normalize";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.my-home-nav {
+    height: 60px;
+    width: 100%;
+    background-color: blueviolet;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    .logo {
+        height: 30px;
+        padding-left: 20px;
+        width: 70%;
+        min-width: 200px;
+        max-width: 200px;
+        .logo-text {
+            font-size: 25px;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            font-weight: bold;
+            color: white;
+            i {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.content-area {
+    min-height: 80px;
+    color: rgba(36, 36, 36, 255);
+    background-color: grey;
+    input,
+    select {
+        outline: none;
+        &:active,
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+    }
+    .search-box {
+        margin: auto;
+        padding-top: 15px;
+        width: 90%;
+        height: 80px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        .block-a {
+            display: inline-flex;
+            background: black;
+            select {
+                width: 140px;
+                height: 30px;
+            }
+        }
+        .block-b {
+            display: inline-flex;
+            max-width: 280px;
+            flex-direction: row;
+            input {
+                height: 30px;
+                flex: 1;
+                max-width: 280px;
+            }
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 80px;
+                border: none;
+            }
+        }
+    }
+    .result {
+        background-color: yellowgreen;
+        height: 70vh;
+        overflow-y: scroll;
+        .list ul {
+            width: 90%;
+            margin: auto;
+            padding-top: 20px;
+            list-style: none;
+            li {
+                width: 100%;
+                background: white;
+                padding: 2px 2px;
+                margin-bottom: 5px;
+                border-radius: 10px;
+                &:last-child{
+                    margin-bottom: 150px;
+                }
+                h3 {
+                    color: red;
+                    margin: 0;
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
