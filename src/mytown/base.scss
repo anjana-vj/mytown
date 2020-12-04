@@ -1,5 +1,13 @@
 @import "normalize";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+}
 html {
     background-color: white;
     margin: 0;
@@ -94,24 +102,44 @@ html {
             &:last-child {
                 margin-bottom: 150px;
             }
-            div {
+            .result-block {
                 display: block;
                 margin: 0;
                 width: 100%;
                 background: white;
                 padding: 2px 2px;
                 margin-bottom: 5px;
-                border-radius: 10px;
+                border-radius: 1px;
+                @extend .card;
+                .section-a {
+                    display: flex;
 
-                h3 {
-                    color: red;
-                    margin: 0;
-                    font-size: 15px;
-                    line-height: 20px;
-                }
-                p {
-                    margin: 0;
-                    padding: 0;
+                    .title-block {
+                        flex: 1;
+                        h3 {
+                            color: red;
+                            margin: 0;
+                            font-size: 15px;
+                            line-height: 20px;
+                        }
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                    .link-block{
+                        a{
+                            display: inline-block;
+                            padding: 5px;
+                        i{
+                            font-size: 30px;
+                            color: red;
+                        }
+                        .fa-phone{
+                            color: green;
+                        }
+                    }
+                    }
                 }
             }
         }
