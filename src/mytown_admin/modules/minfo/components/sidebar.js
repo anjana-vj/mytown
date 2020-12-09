@@ -8,8 +8,8 @@ export default class Sidebar extends React.Component {
                 <div href="#index3.html" className="brand-link text-center">
                     <img src={logo} alt="AdminLTE Logo" className="brand-image img-circle elevation-3"
                         style={{ opacity: 0.8 }} />
-                    <span className="brand-text text-bold text-center text-green">Mahallu </span>
-                    <span className="brand-text text-bold text-center">Info</span>
+                    <span className="brand-text text-bold text-center text-green">MyTown </span>
+                    <span className="brand-text text-bold text-center">Admin</span>
                 </div>
 
                 <div className="hidden-scroll sidebar">

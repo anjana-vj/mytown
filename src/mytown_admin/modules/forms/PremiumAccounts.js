@@ -4,7 +4,6 @@ import data from './../../../mytown/mytown_data.json';
 class PremiumAccounts extends React.Component {
     constructor() {
         super()
-
     }
     render() {
         return (
@@ -32,7 +31,7 @@ class PremiumAccounts extends React.Component {
                                             <td>{business.city}</td>
                                             <td>
                                                 <NavLink className="btn btn-sm btn-warning" to={'/admin/business/premium/edit/' + index + 1}><i className="fa fa-edit"></i> Edit</NavLink>
-                                            &nbsp; <button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> Delete</button>
+                                            &nbsp; <button className="btn btn-sm btn-danger"><i className="fa fa-close"></i> Remove</button>
                                             </td>
                                         </tr>
                                     )
@@ -75,4 +74,4 @@ class EditPremiumAccount extends React.Component {
         )
     }
 }
-export { PremiumAccounts };
+export { PremiumAccounts, EditPremiumAccount };
