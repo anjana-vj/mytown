@@ -5,13 +5,15 @@
   "private": true,
   "author": "anjana-vj",
   "dependencies": {
+    "firebase": "^7.16.1",
+    "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-firebase": "^2.2.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-firebase": "^2.2.8",
-    "firebase": "^7.16.1"
+    "select2": "^4.0.13"
   },
   "scripts": {
     "start": "react-scripts start",
