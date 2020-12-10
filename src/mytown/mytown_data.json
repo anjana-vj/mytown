@@ -15,7 +15,6 @@
         {
             "city": "KANJIRAPPALLY"
         }
-    
     ],
     "clist": [
         {
@@ -62,8 +61,48 @@
         },
         {
             "domain": "EMERGENCY SERVICE"
-        },{
+        },
+        {
             "domain": "STATIONERY"
+        }
+    ],
+    "reviews": [
+        {
+            "cid": "ANJANA",
+            "bname": "royal",
+            "category": "hotel",
+            "city": "mundakayam",
+            "review": "excellent",
+            "rating":"5",
+            "publish":1
+        },
+        
+        {
+            "cid": "yasim",
+            "bname": "abc",
+            "category": "restruant",
+            "city": "mundakayam",
+            "review": "good",
+            "rating":"4",
+            "publish":1
+        },
+        {
+            "cid": "ANJANA",
+            "bname": "royal",
+            "category": "hotel",
+            "city": "mundakayam",
+            "review": "excellent",
+            "rating":"5",
+            "publish":1
+        },
+        {
+            "cid": "ANJANA",
+            "bname": "royal",
+            "category": "hotel",
+            "city": "mundakayam",
+            "review": "excellent",
+            "rating":"5",
+            "publish":0
         }
 
     ],
@@ -73,856 +112,968 @@
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SHOP B",
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
         {
             "name": "SWEDANS PARK",
             "category": "PARK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "MMT HOSPITAL",
             "category": "HOSPITAL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
         {
             "name": "SAHS",
             "category": "SCHOOL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-       {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":1
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "DISTRICT CO-OPERATIVE",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "LULU MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CENTER SQUARE MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "AKSHAYA KENDREM",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "VILLAGE OFFIOCE",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KSEB",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KRISHIBHAVAN",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KIDZA IN",
             "category": "STATIONERY",
             "add": "JS COMPLEX",
             "city": "KANJIRAPPALLY",
-            "mob":"0000000000"
-        }
-
-        ,
+            "mob": "0000000000",
+            "premium":0
+        },
         {
             "name": "SHOP B",
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SWEDANS PARK",
             "category": "PARK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "MMT HOSPITAL",
             "category": "HOSPITAL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SAHS",
             "category": "SCHOOL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-       {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "DISTRICT CO-OPERATIVE",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "LULU MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CENTER SQUARE MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "AKSHAYA KENDREM",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "VILLAGE OFFIOCE",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KSEB",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KRISHIBHAVAN",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KIDZA IN",
             "category": "STATIONERY",
             "add": "JS COMPLEX",
             "city": "KANJIRAPPALLY",
-            "mob":"0000000000"
-        }
-        ,
+            "mob": "0000000000",
+            "premium":0
+        },
         {
             "name": "SHOP B",
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SWEDANS PARK",
             "category": "PARK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "MMT HOSPITAL",
             "category": "HOSPITAL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SAHS",
             "category": "SCHOOL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-       {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "DISTRICT CO-OPERATIVE",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "LULU MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CENTER SQUARE MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "AKSHAYA KENDREM",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "VILLAGE OFFIOCE",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KSEB",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KRISHIBHAVAN",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KIDZA IN",
             "category": "STATIONERY",
             "add": "JS COMPLEX",
             "city": "KANJIRAPPALLY",
-            "mob":"0000000000"
-        }
-        ,
+            "mob": "0000000000",
+            "premium":0
+        },
         {
             "name": "SHOP B",
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SWEDANS PARK",
             "category": "PARK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "MMT HOSPITAL",
             "category": "HOSPITAL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SAHS",
             "category": "SCHOOL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-       {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "DISTRICT CO-OPERATIVE",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "LULU MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CENTER SQUARE MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "AKSHAYA KENDREM",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "VILLAGE OFFIOCE",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KSEB",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KRISHIBHAVAN",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KIDZA IN",
             "category": "STATIONERY",
             "add": "JS COMPLEX",
             "city": "KANJIRAPPALLY",
-            "mob":"0000000000"
-        }
-        ,
+            "mob": "0000000000",
+            "premium":0
+        },
         {
             "name": "SHOP B",
             "category": "HOTEL",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SWEDANS PARK",
             "category": "PARK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "MMT HOSPITAL",
             "category": "HOSPITAL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "SAHS",
             "category": "SCHOOL",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-       {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "SBI",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CO-OPERATIVE BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY B",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY C",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "UNION BANK",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY D",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "DISTRICT CO-OPERATIVE",
             "category": "BANK",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "LULU MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "CENTER SQUARE MALL",
             "category": "SHOPPING MALLS",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
         {
             "name": "AKSHAYA KENDREM",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "VILLAGE OFFIOCE",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KSEB",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KRISHIBHAVAN",
             "category": "GOV.OFFICES",
             "add": "xxxxxxxxx",
             "city": "CITY A",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         },
-         {
+        {
             "name": "KIDZA IN",
             "category": "STATIONERY",
             "add": "JS COMPLEX",
             "city": "KANJIRAPPALLY",
-            "mob":"0000000000"
+            "mob": "0000000000",
+            "premium":0
         }
-        
-        
-        
-        
     ]
 }

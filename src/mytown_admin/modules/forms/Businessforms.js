@@ -1,5 +1,53 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import data from '../../../mytown/mytown_data.json';
+class AllBusiness extends React.Component {
+    constructor() {
+        super();
+    }
+    render() {
+        return (
+            <div className="scroll-area">
+                <section className="content">
+                    <div className="container  p-4">
+                        <h2>All Accounts</h2>
+                        <table className="table table-bordered bg-white">
+                            <tr>
+                                <th>SI.No</th>
+                                <th>Business Name</th>
+                                <th>Category</th>
+                                <th>Address</th>
+                                <th>city</th>
+                                <th>Actions</th>
+                            </tr>
+                            {
+                                data.blist.map((business, index) => {
+                                    return (
+
+                                        <tr>
+                                            <td>{index + 1}</td>
+                                            <td>{business.name}</td>
+                                            <td>{business.category}</td>
+                                            <td>{business.add}</td>
+                                            <td>{business.city}</td>
+                                            <td>
+                                                <NavLink className="btn btn-sm btn-warning" to={'/admin/business/premium/edit/' + index + 1}><i className="fa fa-edit"></i> Edit</NavLink>
+                                            &nbsp; <button className="btn btn-sm btn-danger"><i className="fa fa-close"></i> Remove</button>
+                                            </td>
+                                        </tr>
+                                    )
+                                })
+
+                            }
+
+                        </table>
+                    </div>
+                </section>
+            </div>
+        )
+    }
+
+}
 class AddBusinessDataForm extends React.Component {
     constructor() {
         super();
@@ -11,7 +59,7 @@ class AddBusinessDataForm extends React.Component {
                     <div className="container  p-4">
                         <div className="row justify-content-center">
                             <div className="col-md-6">
-                                <h2>Busness Details</h2>
+                                <h2>Business Details</h2>
                                 <form className="form">
                                     <div className="form-group">
                                         <input className="form-control" type="text" name="bname" placeholder="Busness Name" required />
@@ -100,7 +148,7 @@ class AddCategoriesForm extends React.Component {
                                                     <tr>
                                                         <td >{categories.domain}</td>
                                                         <td className="text-center">
-                                                            <button className="btn btn-sm btn-primary">Edit</button>
+                                                            <button className="btn btn-sm btn-primary">Edit</button> &nbsp;
                                                             <button className="btn btn-sm btn-danger">Delete</button>
                                                         </td>
                                                     </tr>
@@ -132,4 +180,4 @@ class AddCategoriesForm extends React.Component {
 }
 
 
-export { AddBusinessDataForm, AddCategoriesForm }
+export { AddBusinessDataForm, AddCategoriesForm, AllBusiness }

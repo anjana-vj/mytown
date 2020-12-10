@@ -30,6 +30,12 @@ export default class Sidebar extends React.Component {
                                 </NavLink>
                                 <ul className="nav nav-treeview">
                                     <li className="nav-item">
+                                        <NavLink to="/admin/business/all" exact className="nav-link">
+                                            <i className="fas fa-landmark  nav-icon"></i>
+                                            <p>All Business</p>
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
                                         <NavLink to="/admin/business/add" exact className="nav-link">
                                             <i className="fas fa-landmark  nav-icon"></i>
                                             <p>Add Business Parters</p>
@@ -51,7 +57,7 @@ export default class Sidebar extends React.Component {
                             </li>
 
                             <li className="nav-item has-treeview menu-open">
-                                <NavLink to="/admin/registrations/" className="nav-link">
+                                <NavLink to="/admin/reviews/" className="nav-link">
                                     <i className="nav-icon fas fa-file"></i>
                                     <p>
                                         Reviews <i className="right fas fa-angle-left"></i>
@@ -59,7 +65,7 @@ export default class Sidebar extends React.Component {
                                 </NavLink>
                                 <ul className="nav nav-treeview">
                                     <li className="nav-item">
-                                        <NavLink to="/admin/reviews" className="nav-link">
+                                        <NavLink to="/admin/reviews/all" className="nav-link">
                                             <i className="fas fa-birthday-cake  nav-icon"></i>
                                             <p>All Reviews</p>
                                         </NavLink>
@@ -73,34 +79,13 @@ export default class Sidebar extends React.Component {
                                 </ul>
                             </li>
 
-                            <li class="nav-header mt-0 pt-0 text-green">Data Management</li>
+                            <li className="nav-header mt-0 pt-0 text-green">Data Management</li>
                             <li className="nav-item">
                                 <NavLink to="/admin/customers" className="nav-link">
                                     <i className="nav-icon fas fa-home"></i>
                                     <p>customers</p>
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink to="/minfo/memebers" className="nav-link">
-                                    <i className="nav-icon fas fa-users"></i>
-                                    <p>Members</p>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to="/minfo/staff" className="nav-link">
-                                    <i className="nav-icon fas fa-user-shield"></i>
-                                    <p>Staff</p>
-                                </NavLink>
-                            </li>
-                            <li class="nav-header mt-0 pt-0 text-warning">Institution Management</li>
-
-                            <li className="nav-item">
-                                <NavLink to="/minfo/education" className="nav-link">
-                                    <i className="nav-icon fas fa-university"></i>
-                                    <p>Maddrasa</p>
-                                </NavLink>
-                            </li>
-
                         </ul>
                     </nav>
                 </div>

@@ -7,7 +7,6 @@ import {
     //Link
 } from "react-router-dom";
 
-
 import { Sidebar, NavBar, Footer } from './modules/minfo/components';
 
 //---------------------------------------------
@@ -18,8 +17,12 @@ import './etc/js_lib/bootstrap.bundle';
 import './etc/ui_lib/index.css';
 //---------------------------------------------
 
-import { AddBusinessDataForm, AddCategoriesForm } from './modules/forms/Businessforms';
-import {PremiumAccounts} from './modules/forms/PremiumAccounts';
+import { AddBusinessDataForm, AddCategoriesForm, AllBusiness } from './modules/forms/Businessforms';
+import { PremiumAccounts, EditPremiumAccount } from './modules/forms/PremiumAccounts';
+import { Dashboard } from './modules/minfo/Dashboard';
+import { Reviews } from './modules/minfo/Reviews';
+
+
 import $ from 'jquery'
 window.jQuery = $;
 window.$ = $;
@@ -32,10 +35,13 @@ export default function MyTowmAdmin() {
         <div className="content-wrapper">
             <Switch>
                 <Route exact path={path}>
-                    Dash
-            </Route>
-                <Route path={`${path}/reviews`} exact>
-                    0
+                    <Dashboard />
+                </Route>
+                <Route path={`${path}/reviews/all`} exact>
+                    <Reviews />
+                </Route>
+                <Route path={`${path}/business/all`} exact>
+                    <AllBusiness />
                 </Route>
                 <Route path={`${path}/business/add`} exact>
                     <AddBusinessDataForm />
@@ -46,7 +52,7 @@ export default function MyTowmAdmin() {
                 <Route path={`${path}/business/premium`} exact>
                     <PremiumAccounts />
                 </Route>
-
+                <Route path={`${path}/business/premium/edit/:id`} exact component={EditPremiumAccount} />
             </Switch>
         </div>
 
