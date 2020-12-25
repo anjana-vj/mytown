@@ -30,7 +30,7 @@ html {
         min-width: 200px;
         max-width: 200px;
         .logo-text {
-            font-size: 25px;
+            font-size: 30px;
             font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
             font-weight: bold;
             color: white;
@@ -90,7 +90,7 @@ html {
         }
     }
     .result {
-        background-color: yellowgreen;
+        background-color: white ;
         height: 80vh;
         overflow-y: scroll;
         .list {
@@ -110,8 +110,10 @@ html {
                 padding: 2px 2px;
                 margin-bottom: 5px;
                 border-radius: 1px;
+
                 @extend .card;
                 .section-a {
+                    margin:15px 15px;
                     display: flex;
 
                     .title-block {
@@ -144,4 +146,7 @@ html {
             }
         }
     }
+}
+.fa-phone{
+    transform: scaleX(-1);
 }

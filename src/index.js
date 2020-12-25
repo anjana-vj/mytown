@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import MyAppHome from './mytown/MyApp';
 import MyTowmAdmin from './mytown_admin/admin';
+import MyTowmUser from './mytown_user/user';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,9 @@ ReactDOM.render(
         </Route>
         <Route path="/admin">
           <MyTowmAdmin/>
+        </Route>
+        <Route path="/user">
+          <MyTowmUser/>
         </Route>
       </Switch>
     </Router>

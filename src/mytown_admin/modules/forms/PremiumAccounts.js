@@ -108,4 +108,4 @@ class EditPremiumAccount extends React.Component {
         )
     }
 }
-export { PremiumAccounts, EditPremiumAccount };
+export { PremiumAccounts, EditPremiumAccount }

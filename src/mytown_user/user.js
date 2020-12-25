@@ -17,17 +17,15 @@ import './etc/js_lib/bootstrap.bundle';
 import './etc/ui_lib/index.css';
 //---------------------------------------------
 
-import { AddBusinessDataForm, AddCategoriesForm, AllBusiness } from './modules/forms/Businessforms';
-import { PremiumAccounts, EditPremiumAccount } from './modules/forms/PremiumAccounts';
 import { Dashboard } from './modules/Dashboard';
-import { Reviews } from './modules/Reviews';
+import { BusinessUserRegistration } from './modules/forms/BasicForms'
 
 
 import $ from 'jquery'
 window.jQuery = $;
 window.$ = $;
 
-export default function MyTowmAdmin() {
+export default function MyTowmUser() {
     let { path } = useRouteMatch();
     return (<>
         <NavBar />
@@ -35,29 +33,14 @@ export default function MyTowmAdmin() {
         <div className="content-wrapper">
             <Switch>
                 <Route exact path={path}>
-                    {localStorage.getItem("admin-login") === 'true' ? <Dashboard /> : <Login />}
-
+                {localStorage.getItem("user-login") === 'true' ? <Dashboard />: <Login />}
                 </Route>
-
-                <Route path={`${path}/dashboard`} >
+                <Route path={`${path}/dashboard`} exact>
                     <Dashboard />
                 </Route>
-                <Route path={`${path}/reviews/all`} exact>
-                    <Reviews />
+                <Route path={`${path}/register`} exact>
+                    <BusinessUserRegistration />
                 </Route>
-                <Route path={`${path}/business/all`} exact>
-                    <AllBusiness />
-                </Route>
-                <Route path={`${path}/business/add`} exact>
-                    <AddBusinessDataForm />
-                </Route>
-                <Route path={`${path}/business/categories`} exact>
-                    <AddCategoriesForm />
-                </Route>
-                <Route path={`${path}/business/premium`} exact>
-                    <PremiumAccounts />
-                </Route>
-                <Route path={`${path}/business/premium/edit/:id`} exact component={EditPremiumAccount} />
             </Switch>
         </div>
 
@@ -85,8 +68,6 @@ export default function MyTowmAdmin() {
         <Footer />
     </>)
 }
-
-
 class Login extends React.Component {
     constructor() {
         super();
@@ -100,7 +81,7 @@ class Login extends React.Component {
                             <div className="col-md-6">
                                 <div className="box box-info">
                                     <div className="box-header with-border">
-                                        <h3 className="box-title">Admin Login</h3>
+                                        <h3 className="box-title">Business Partner Login</h3>
                                     </div>
                                     <form className="form-horizontal">
                                         <div className="box-body">
@@ -130,12 +111,12 @@ class Login extends React.Component {
                                         </div>
                                         <div className="box-footer">
                                             <button onClick={(e) => {
-                                                localStorage.setItem("admin-login", "true");
-                                                window.location.href = '/admin';
+                                                localStorage.setItem("user-login", "true");
+                                                window.location.href = '/user';
 
                                             }} className="btn btn-info">Log in</button>
-                                            <NavLink className="btn btn-danger pull-right" to="/user">Business Login</NavLink>
-
+                                            <p>Not yet Registered ? <NavLink to="/user/register">SignUP</NavLink></p>
+                                            <p><NavLink to="/admin">Admin Panel</NavLink></p>
                                         </div>
 
                                     </form>

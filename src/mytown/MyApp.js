@@ -1,11 +1,13 @@
 import React from 'react';
 import './base.scss';
 import data from './mytown_data.json';
+import {NavLink} from 'react-router-dom'
 function MyAppHome() {
     return (
         <>
             <div className="my-home-nav">
                 <div className="logo"><div className="logo-text"><i className="fa fa-home"></i>My Town</div></div>
+                <div>Are you a Business ? <NavLink to='/user/'>Login</NavLink> </div>
             </div>
             <SearchEngine />
         </>
@@ -124,7 +126,7 @@ class SearchEngine extends React.Component {
                 <div className="result">
                     <div className="list">
                         {this.state.search_result.length === 0 && this.state.search_filter === '' ? <>
-                            <h1>Choose A City</h1>
+                            <h2>Choose A City</h2   >
                         </> :
                             <>{products}</>}
                         {this.state.no_result === true ? <><h1>Result Not Found</h1></> : null}

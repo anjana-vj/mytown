@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './../../../mytown/mytown_data.json'
+import data from './../../mytown/mytown_data.json'
 class Reviews extends React.Component {
     render() {
         return (

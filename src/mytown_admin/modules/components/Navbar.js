@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import logo from '../../../etc/ui_lib/diya_logo.jpg';
+import logo from './../../etc/ui_lib/logo.png';
 export default class Navbar extends React.Component{
     render(){
         return(
@@ -9,10 +9,9 @@ export default class Navbar extends React.Component{
                 <li className="nav-item">
                     <button className="btn btn-link nav-link" data-widget="pushmenu" href="##"><i className="fas fa-bars"></i></button>
                 </li>
-                <li className="nav-item d-none d-sm-inline-block">
-                    <NavLink exact to="/admin/" className="nav-link">Dashboard</NavLink>
-                </li>
             </ul>
+            {localStorage.getItem("admin-login") === 'true' ? <>
+
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item dropdown">
                     <button className="btn btn-link nav-link" data-toggle="dropdown">
@@ -25,11 +24,11 @@ export default class Navbar extends React.Component{
                                 <img src={logo} alt="User Avatar" className="img-size-50 mr-3 img-circle" />
                                 <div className="media-body">
                                     <h3 className="dropdown-item-title">
-                                        Brad Diesel
+                                      
                 <span className="float-right text-sm text-danger"><i className="fas fa-star"></i></span>
                                     </h3>
-                                    <p className="text-sm">Call me whenever you can...</p>
-                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p className="text-sm"></p>
+                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i></p>
                                 </div>
                             </div>
                         </a>
@@ -40,11 +39,11 @@ export default class Navbar extends React.Component{
                                 <img src={logo} alt="User Avatar" className="img-size-50 img-circle mr-3" />
                                 <div className="media-body">
                                     <h3 className="dropdown-item-title">
-                                        John Pierce
+                                       
                 <span className="float-right text-sm text-muted"><i className="fas fa-star"></i></span>
                                     </h3>
-                                    <p className="text-sm">I got your message bro</p>
-                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p className="text-sm"></p>
+                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> </p>
                                 </div>
                             </div>
                         </a>
@@ -54,11 +53,11 @@ export default class Navbar extends React.Component{
                                 <img src={logo} alt="User Avatar" className="img-size-50 img-circle mr-3" />
                                 <div className="media-body">
                                     <h3 className="dropdown-item-title">
-                                        Nora Silvester
+                                      
                 <span className="float-right text-sm text-warning"><i className="fas fa-star"></i></span>
                                     </h3>
-                                    <p className="text-sm">The subject goes here</p>
-                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p className="text-sm"></p>
+                                    <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> </p>
                                 </div>
                             </div>
                         </a>
@@ -98,11 +97,13 @@ export default class Navbar extends React.Component{
                 </li>
                 <li className="nav-item">
                     <button className="btn btn-link nav-link" onClick={() => {
-                        window.close()
+                       localStorage.removeItem("admin-login");
+                       window.location.href = '/admin/';
                     }}><i
                         className="fas fa-power-off "></i></button>
                 </li>
             </ul>
+            </> : null}
         </nav>
         )
     }
