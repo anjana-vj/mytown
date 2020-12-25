@@ -48,6 +48,7 @@ class AllBusiness extends React.Component {
     }
 
 }
+
 class AddBusinessDataForm extends React.Component {
     constructor() {
         super();
