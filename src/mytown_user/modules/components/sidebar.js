@@ -21,11 +21,32 @@ export default class Sidebar extends React.Component {
                                 </li>
                                 <li className="nav-header mt-0 pt-0 text-green">Data Management</li>
                                 <li className="nav-item">
-                                    <NavLink to="/user/customers" className="nav-link">
+                                    <NavLink to="/user/Basic/BusinessUserRegistration" className="nav-link">
                                         <i className="nav-icon fas fa-home"></i>
-                                        <p>customers</p>
+                                        <p>Registration</p>
                                     </NavLink>
                                 </li>
+                                <li className="nav-item">
+                                    <NavLink to="/user/Basic/ManageBookings" className="nav-link">
+                                        <i className="nav-icon fas fa-home"></i>
+                                        <p>manage bookings</p>
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to="/user/Basic/MyReviews" className="nav-link">
+                                        <i className="nav-icon fas fa-home"></i>
+                                        <p>my reviews</p>
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to="/user/Basic/ViewMyAccountForm" className="nav-link">
+                                        <i className="nav-icon fas fa-home"></i>
+                                        <p>My Account</p>
+                                    </NavLink>
+                                </li>
+
+
+
                             </ul>
                         </nav>
                     </div>

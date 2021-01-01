@@ -18,8 +18,7 @@ import './etc/ui_lib/index.css';
 //---------------------------------------------
 
 import { Dashboard } from './modules/Dashboard';
-import { BusinessUserRegistration } from './modules/forms/BasicForms'
-
+import { BusinessUserRegistration,CustomerRegistration,CustomerReview,ManageBookings,EditAccountDetails,ViewMyAccountForm,UserBookings,MyReviews,PremiumMembershipForm  } from './modules/forms/BasicForms'; 
 
 import $ from 'jquery'
 window.jQuery = $;
@@ -38,8 +37,20 @@ export default function MyTowmUser() {
                 <Route path={`${path}/dashboard`} exact>
                     <Dashboard />
                 </Route>
-                <Route path={`${path}/register`} exact>
-                    <BusinessUserRegistration />
+                <Route path={`${path}/basic/BusinesssUserRegistration`} exact>
+                    <BusinessUserRegistration  />
+                </Route>
+                <Route path={`${path}/basic/BusinesssUserRegistration/PremiumMembershipForm`} exact>
+                    <PremiumMembershipForm />
+                </Route>
+                <Route path={`${path}/basic/ManageBookings`} exact>
+                    <ManageBookings />
+                </Route>
+                <Route path={`${path}/basic/myreviews`} exact>
+                    <MyReviews />
+                </Route>
+                <Route path={`${path}/basic/ViewMyAccountForm`} exact>
+                    <ViewMyAccountForm />
                 </Route>
             </Switch>
         </div>
