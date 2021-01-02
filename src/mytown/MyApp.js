@@ -1,5 +1,7 @@
 import React from 'react';
 import './base.scss';
+import './../firebase';
+import firebase from 'firebase';
 import data from './mytown_data.json';
 import { NavLink } from 'react-router-dom'
 function MyAppHome() {
@@ -20,25 +22,85 @@ class SearchEngine extends React.Component {
             search_result: [],
             search_filter: '',
             no_result: false,
-            search_keyword: ''
+            search_keyword: '',
+            categories: [],
+            cities: []
         };
         this.oncitychange = this.oncitychange.bind(this);
         this.oncategorychange = this.oncategorychange.bind(this);
         this.noresultchange = this.noresultchange.bind(this);
     }
+    componentDidMount() {
+        this.readCities();
+        this.readCategories();
+    }
+    readCategories = () => {
+        var database = firebase.database();
+        var CategoriesRef = database.ref('categories');
+        CategoriesRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const datas = Object.keys(data).map(key => ({
+                    ...data[key]
+                }));
+                this.setState({
+                    categories: datas
+                })
+            } else {
+                this.setState({
+                    categories: []
+                })
+            }
+        });
+
+    }
+    readCities = () => {
+        var database = firebase.database();
+        var starCountRef = database.ref('cities');
+        starCountRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const datas = Object.keys(data).map(key => ({
+                    ...data[key]
+                }));
+                this.setState({
+                    cities: datas
+                })
+            } else {
+                this.setState({
+                    cities: []
+                })
+            }
+        });
+
+    }
     oncitychange = (e) => {
-        var list = data.blist.filter(city =>
-            city.city === e.target.value
-        );
-        this.setState({
-            search_result: list
-        })
-        document.getElementById('cat_sel').value = '';
-        var es = [];
-        var as = [];
-        as['value'] = "";
-        es['target'] = as;
-        this.oncategorychange(es);
+        const event = e.target.value;
+        var database = firebase.database();
+        var CategoriesRef = database.ref('business_list');
+        CategoriesRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const datas = Object.keys(data).map(key => ({
+                    ...data[key]
+                }));
+                var list = datas.filter(city =>
+                    city.city === event
+                );
+                this.setState({
+                    search_result: list
+                })
+                try {
+                    document.getElementById('cat_sel').value = '';
+                } catch (e) { console.log(e) }
+                var es = [];
+                var as = [];
+                as['value'] = "";
+                es['target'] = as;
+                this.oncategorychange(es);
+
+            }
+        });
 
     }
     oncategorychange = (e) => {
@@ -63,7 +125,7 @@ class SearchEngine extends React.Component {
             if (this.state.search_filter !== '') {
                 return category.category === this.state.search_filter
             }
-            else if (category.name.toLowerCase().includes(this.state.search_keyword.toLowerCase()) || category.add.toLowerCase().includes(this.state.search_keyword.toLowerCase())) {
+            else if (category.bname.toLowerCase().includes(this.state.search_keyword.toLowerCase()) || category.add.toLowerCase().includes(this.state.search_keyword.toLowerCase())) {
 
                 return category;
             }
@@ -72,7 +134,7 @@ class SearchEngine extends React.Component {
             }
         });
         const products = productsu.filter((category) => {
-            if (category.name.toLowerCase().includes(this.state.search_keyword.toLowerCase()) || category.add.toLowerCase().includes(this.state.search_keyword.toLowerCase())) {
+            if (category.bname.toLowerCase().includes(this.state.search_keyword.toLowerCase()) || category.address_line1.toLowerCase().includes(this.state.search_keyword.toLowerCase())) {
                 return category;
             }
             else {
@@ -84,11 +146,12 @@ class SearchEngine extends React.Component {
                 <div className="result-block">
                     <div className="section-a">
                         <div className="title-block">
-                            <h3>{lister.name}</h3>
-                            <p>{lister.add}</p>
+                            <h3>{lister.bname}</h3>
+                            <p>{lister.address_line1}</p>
+                            <p>{lister.address_line2}</p>
                         </div>
                         <div className="link-block">
-                            <a href={"tel:" + lister.mob} title="Hellooo" aria-label="phonelink"><i className="fa fa-phone fa-2x" aria-hidden="true"></i>.</a>
+                            <a href={"tel:" + lister.mobile} title="Hellooo" aria-label="phonelink"><i className="fa fa-phone fa-2x" aria-hidden="true"></i>.</a>
                             <a href="#a" title="maplink" aria-label="map-link"><i className="fa fa-map-marker fa-2x" aria-hidden="true"></i>.</a>
                         </div>
                     </div>
@@ -102,17 +165,17 @@ class SearchEngine extends React.Component {
                         <div className="block-a">
                             <select onChange={this.oncitychange}>
                                 <option>Choose City</option>
-                                {data.city.map((city_list) => {
+                                {this.state.cities.map((city) => {
                                     return (
-                                        <option>{city_list.city}</option>
+                                        <option key={city.key}>{city.domain}</option>
                                     )
                                 })}
                             </select>
                             <select id="cat_sel" onChange={this.oncategorychange}>
                                 <option value="">Category All</option>
-                                {data.clist.map((c_list) => {
+                                {this.state.categories.map((category) => {
                                     return (
-                                        <option>{c_list.domain}</option>
+                                        <option key={category.key}>{category.domain}</option>
                                     )
                                 })}
                             </select>

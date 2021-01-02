@@ -21,7 +21,7 @@ import { PremiumAccounts, EditPremiumAccount } from './modules/forms/PremiumAcco
 import { Dashboard } from './modules/Dashboard';
 import { Reviews } from './modules/Reviews';
 
-import { CategoriesModule, CitiesModule, AddBusinessDataForm,AllBusinessList } from './modules/BusinessData'
+import { CategoriesModule, CitiesModule, AddBusinessDataForm, AllBusinessList, EditBusinessDataForm } from './modules/BusinessData'
 
 import $ from 'jquery'
 window.jQuery = $;
@@ -51,6 +51,7 @@ export default function MyTowmAdmin() {
                 <Route path={`${path}/business/add`} exact>
                     <AddBusinessDataForm />
                 </Route>
+                <Route path={`${path}/business/edit/:id`} exact component={EditBusinessDataForm} />
                 <Route path={`${path}/business/categories`} exact>
                     <CategoriesModule />
                 </Route>
@@ -63,28 +64,6 @@ export default function MyTowmAdmin() {
                 <Route path={`${path}/business/premium/edit/:id`} exact component={EditPremiumAccount} />
             </Switch>
         </div>
-
-        <aside className="control-sidebar control-sidebar-dark">
-            <div className="p-3">
-                <h5>Title</h5>
-                <p>Sidebar content</p>
-
-            </div>
-            <div>
-                <ul className="nav" >
-                    <li className="nav-item">
-                        <NavLink to="/minfo/yasi" className="nav-link">
-                            <i className="nav-icon fas fa-cogs"></i> API Transactions
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/minfo/start" className="nav-link">
-                            <i className="nav-icon fas fa-cogs"></i> Example
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </aside>
         <Footer />
     </>)
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-
 import './../../firebase';
 import firebase from 'firebase';
 import $ from 'jquery';
@@ -118,7 +117,7 @@ class CategoriesModule extends React.Component {
                                 <form className="form m-2" onSubmit={this.addCategories}>
                                     <h2>Add Category</h2>
                                     <div className="form-group">
-                                        <input type="text" value={this.state.input_handlerCategoriesValue} onChange={this.input_handlerCategories} className="form-control" placeholder="category name" required />
+                                        <input type="text" defaultValue={this.state.input_handlerCategoriesValue} onChange={this.input_handlerCategories} className="form-control" placeholder="category name" required />
 
                                     </div>
                                     <div className="form-group">
@@ -246,7 +245,7 @@ class CitiesModule extends React.Component {
                                 <form className="form m-2" onSubmit={this.addCities}>
                                     <h2>Add City</h2>
                                     <div className="form-group">
-                                        <input type="text" value={this.state.input_handlerCitiesValue} onChange={this.input_handlerCities} className="form-control" placeholder="city name" required />
+                                        <input type="text" defaultValue={this.state.input_handlerCitiesValue} onChange={this.input_handlerCities} className="form-control" placeholder="city name" required />
 
                                     </div>
                                     <div className="form-group">
@@ -268,6 +267,7 @@ class AddBusinessDataForm extends React.Component {
         super();
         this.readCategories = this.readCategories.bind(this)
         this.readCities = this.readCities.bind(this)
+        this.addNewBusiness = this.addNewBusiness.bind(this)
         this.state = {
             categories: [],
             cities: []
@@ -334,6 +334,9 @@ class AddBusinessDataForm extends React.Component {
         });
     }
 
+    NumberHandle = (event) => {
+        event.target.value = event.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    }
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -350,8 +353,8 @@ class AddBusinessDataForm extends React.Component {
                                         <input className="form-control" type="text" name="ename" placeholder="Entrepreneur Name" required />
                                     </div>
                                     <div className="form-group">
-                                        <select className="custom-select" name="category" id="category" required>
-                                            <option disabled selected defaultValue=''>Choose category</option>
+                                        <select className="custom-select" name="category" id="category" required defaultValue=''>
+                                            <option disabled value="">Choose category</option>
                                             {this.state.categories.map((category) => {
                                                 return (
                                                     <option key={category.key} value={category.domain}>{category.domain}</option>
@@ -368,8 +371,8 @@ class AddBusinessDataForm extends React.Component {
                                     </div>
 
                                     <div className="form-group">
-                                        <select className="custom-select" name="city" required >
-                                            <option disabled selected defaultValue=''>Choose City</option>
+                                        <select className="custom-select" name="city" required defaultValue="" >
+                                            <option disabled value=''>Choose City</option>
                                             {this.state.cities.map((city) => {
                                                 return (
                                                     <option key={city.key} value={city.domain}>{city.domain}</option>
@@ -378,14 +381,175 @@ class AddBusinessDataForm extends React.Component {
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" name="pin" placeholder="PIN Code" required />
+                                        <input type="text" className="form-control" name="pin" pattern=".{6}"
+                                            onInput={this.NumberHandle} placeholder="PIN Code" required />
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" name="mobile" placeholder="contact number" required />
+                                        <input type="text" className="form-control" name="mobile" pattern=".{10}"
+                                            onInput={this.NumberHandle} placeholder="contact number" required />
                                     </div>
                                     <div className="form-group">
                                         <button className="btn btn-lg btn-success" type="submit">ADD</button>
 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        )
+    }
+}
+class EditBusinessDataForm extends React.Component {
+    constructor() {
+        super();
+        this.readCategories = this.readCategories.bind(this)
+        this.readCities = this.readCities.bind(this);
+        this.SaveEditBusiness = this.SaveEditBusiness.bind(this);
+        this.readBusinessData = this.readBusinessData.bind(this);
+        this.state = {
+            categories: [],
+            cities: [],
+            business_data: []
+        }
+    }
+    componentDidMount() {
+        this.readCategories();
+        this.readCities();
+        this.readBusinessData();
+    }
+    readBusinessData = () => {
+        var database = firebase.database();
+        var CategoriesRef = database.ref('business_list/' + this.props.match.params.id);
+        CategoriesRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                this.setState({
+                    business_data: data
+                })
+            } else {
+                this.setState({
+                    business_data: []
+                })
+            }
+        });
+    }
+    readCategories = () => {
+        var database = firebase.database();
+        var CategoriesRef = database.ref('categories');
+        CategoriesRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const datas = Object.keys(data).map(key => ({
+                    ...data[key]
+                }));
+                this.setState({
+                    categories: datas
+                })
+            } else {
+                this.setState({
+                    categories: []
+                })
+            }
+        });
+
+    }
+    readCities = () => {
+        var database = firebase.database();
+        var starCountRef = database.ref('cities');
+        starCountRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const datas = Object.keys(data).map(key => ({
+                    ...data[key]
+                }));
+                this.setState({
+                    cities: datas
+                })
+            } else {
+                this.setState({
+                    cities: []
+                })
+            }
+        });
+
+    }
+    SaveEditBusiness = (event) => {
+        event.preventDefault();
+        var data = $('#EditNewBusinessForm').serializeJSON();
+        var database = firebase.database();
+        var key = this.props.match.params.id;
+        data['key'] = key;
+        database.ref('business_list/' + key).set(data, (error) => {
+            if (error) {
+                alert(error);
+            }
+            else {
+                alert("Business Data Saved Successfully");
+                this.props.history.goBack();
+            }
+        });
+    }
+    NumberHandle = (event) => {
+        event.target.value = event.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    }
+
+    render() {
+        return (
+            <div id="Minfo_Members_body" className="scroll-area">
+                <section className="content">
+                    <div className="container  p-4">
+                        <div className="row justify-content-center">
+                            <div className="col-md-6">
+                                <h2>Edit Business Details</h2>
+                                <form className="form" id="EditNewBusinessForm" onSubmit={this.SaveEditBusiness}>
+                                    <div className="form-group">
+                                        <input className="form-control" type="text" name="bname" placeholder="Business Name" required defaultValue={this.state.business_data.bname} />
+                                    </div>
+                                    <div className="form-group">
+                                        <input className="form-control" type="text" name="ename" placeholder="Entrepreneur Name" defaultValue={this.state.business_data.ename} required />
+                                    </div>
+                                    <div className="form-group">
+                                        <select className="custom-select" name="category" id="category" required defaultValue={this.state.business_data.category}>
+                                            <option key={0} value={this.state.business_data.category}>{this.state.business_data.category}</option>
+                                            {this.state.categories.map((category) => {
+                                                return (
+                                                    <option key={category.key} value={category.domain}>{category.domain}</option>
+                                                )
+                                            })}
+                                        </select>
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" name="address_line1" placeholder="Address Line 1" required defaultValue={this.state.business_data.address_line1} />
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" name="address_line2" placeholder="Address Line 2" required defaultValue={this.state.business_data.address_line2} />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <select className="custom-select" name="city" required defaultValue={this.state.business_data.city}>
+                                            <option key={1} value={this.state.business_data.city}>{this.state.business_data.city}</option>
+
+                                            {this.state.cities.map((city) => {
+                                                return (
+                                                    <option key={city.key} value={city.domain}>{city.domain}</option>
+                                                )
+                                            })}
+                                        </select>
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" name="pin" pattern=".{6}"
+                                            onInput={this.NumberHandle} placeholder="PIN Code" required defaultValue={this.state.business_data.pin} />
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" name="mobile" pattern=".{10}"
+                                            onInput={this.NumberHandle} placeholder="contact number" required defaultValue={this.state.business_data.mobile} />
+                                    </div>
+                                    <div className="form-group">
+                                        <button type="submit" className="btn btn-md btn-success">Save</button>
+                                        &nbsp;
+                                        <a href="#cancel" onClick={(e) => { e.preventDefault(); this.props.history.goBack(); }} className="btn btn-md btn-danger text-white">Cancel</a>
                                     </div>
                                 </form>
                             </div>
@@ -470,7 +634,8 @@ class AllBusinessList extends React.Component {
                                                 </td>
                                                 <td>{business.city}</td>
                                                 <td>
-                                                    <NavLink className="btn btn-sm btn-warning" to={'/admin/business/premium/edit/' + index + 1}><i className="fa fa-edit"></i> Edit</NavLink>
+                                                    <NavLink className="btn btn-sm btn-warning" to={'/admin/business/edit/' + business.key}><i className="fa fa-edit"></i> Edit</NavLink>&nbsp;
+                                                    <NavLink className="btn btn-sm btn-info" to={'/admin/reviews/single/' + business.key}><i className="fa fa-file"></i> Reviews</NavLink>
                                             &nbsp; <button onClick={() => {
                                                         var r = window.confirm("Do you want to delete : " + business.bname);
                                                         if (r === true) {
@@ -492,4 +657,4 @@ class AllBusinessList extends React.Component {
     }
 
 }
-export { CitiesModule, CategoriesModule, AddBusinessDataForm, AllBusinessList };
+export { CitiesModule, CategoriesModule, AddBusinessDataForm, AllBusinessList, EditBusinessDataForm };
