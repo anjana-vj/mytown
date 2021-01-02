@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+//import {NavLink} from 'react-router-dom';
 import logo from './../../etc/ui_lib/logo.png';
 export default class Navbar extends React.Component{
     render(){

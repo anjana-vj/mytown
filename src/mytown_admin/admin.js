@@ -17,11 +17,11 @@ import './etc/js_lib/bootstrap.bundle';
 import './etc/ui_lib/index.css';
 //---------------------------------------------
 
-import { AddBusinessDataForm, AddCategoriesForm, AllBusiness } from './modules/forms/Businessforms';
 import { PremiumAccounts, EditPremiumAccount } from './modules/forms/PremiumAccounts';
 import { Dashboard } from './modules/Dashboard';
 import { Reviews } from './modules/Reviews';
 
+import { CategoriesModule, CitiesModule, AddBusinessDataForm,AllBusinessList } from './modules/BusinessData'
 
 import $ from 'jquery'
 window.jQuery = $;
@@ -46,13 +46,16 @@ export default function MyTowmAdmin() {
                     <Reviews />
                 </Route>
                 <Route path={`${path}/business/all`} exact>
-                    <AllBusiness />
+                    <AllBusinessList />
                 </Route>
                 <Route path={`${path}/business/add`} exact>
                     <AddBusinessDataForm />
                 </Route>
                 <Route path={`${path}/business/categories`} exact>
-                    <AddCategoriesForm />
+                    <CategoriesModule />
+                </Route>
+                <Route path={`${path}/business/cities`} exact>
+                    <CitiesModule />
                 </Route>
                 <Route path={`${path}/business/premium`} exact>
                     <PremiumAccounts />
@@ -90,6 +93,7 @@ export default function MyTowmAdmin() {
 class Login extends React.Component {
     constructor() {
         super();
+        this.state = {}
     }
     render() {
         return (

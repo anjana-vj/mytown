@@ -3,9 +3,7 @@ import React from 'react';
 import data from '../../../mytown/mytown_data.json';
 
 class BusinessUserRegistration extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -76,9 +74,7 @@ class BusinessUserRegistration extends React.Component {
     }
 }
 class CustomerRegistration extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -125,9 +121,7 @@ class CustomerRegistration extends React.Component {
     }
 }
 class UserBookings extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -154,9 +148,7 @@ class UserBookings extends React.Component {
     }
 }
 class MyReviews extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -184,9 +176,7 @@ class MyReviews extends React.Component {
 }
 
 class BRegistration extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -262,9 +252,7 @@ class BRegistration extends React.Component {
     }
 }
 class PremiumMembershipForm extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -300,9 +288,7 @@ class PremiumMembershipForm extends React.Component {
     }
 }
 class ViewMyAccountForm extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -355,9 +341,7 @@ class ViewMyAccountForm extends React.Component {
     }
 }
 class EditAccountDetails extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">
@@ -433,9 +417,7 @@ class EditAccountDetails extends React.Component {
     }
 }
 class ManageBookings extends React.Component {
-    constructor() {
-        super();
-    }
+    
     render() {
         return (
             <div id="Minfo_Members_body" className="scroll-area">

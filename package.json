@@ -7,6 +7,7 @@
   "dependencies": {
     "firebase": "^7.16.1",
     "jquery": "^3.5.1",
+    "jquery-serializejson": "^3.2.0",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

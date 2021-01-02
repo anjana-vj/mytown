@@ -37,13 +37,19 @@ export default class Sidebar extends React.Component {
                                         <li className="nav-item">
                                             <NavLink to="/admin/business/add" exact className="nav-link">
                                                 <i className="fas fa-landmark  nav-icon"></i>
-                                                <p>Add Business Parters</p>
+                                                <p>New Business</p>
                                             </NavLink>
                                         </li>
                                         <li className="nav-item">
                                             <NavLink to="/admin/business/categories" className="nav-link">
                                                 <i className="fas fa-money-bill-alt nav-icon"></i>
                                                 <p>Categories</p>
+                                            </NavLink>
+                                        </li>
+                                        <li className="nav-item">
+                                            <NavLink to="/admin/business/cities" className="nav-link">
+                                                <i className="fas fa-money-bill-alt nav-icon"></i>
+                                                <p>Cities</p>
                                             </NavLink>
                                         </li>
                                         <li className="nav-item">

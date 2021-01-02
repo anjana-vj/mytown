@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router, Switch, Route, Redirect
+  BrowserRouter as Router, Switch, Route,
+  //Redirect
 } from "react-router-dom";
 import MyAppHome from './mytown/MyApp';
 import MyTowmAdmin from './mytown_admin/admin';

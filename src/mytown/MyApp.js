@@ -1,7 +1,7 @@
 import React from 'react';
 import './base.scss';
 import data from './mytown_data.json';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 function MyAppHome() {
     return (
         <>
@@ -88,8 +88,8 @@ class SearchEngine extends React.Component {
                             <p>{lister.add}</p>
                         </div>
                         <div className="link-block">
-                            <a href={"tel:" + lister.mob} title="Hellooo"><i className="fa fa-phone fa-2x" aria-hidden="true"></i></a>
-                            <a><i className="fa fa-map-marker fa-2x"></i></a>
+                            <a href={"tel:" + lister.mob} title="Hellooo" aria-label="phonelink"><i className="fa fa-phone fa-2x" aria-hidden="true"></i>.</a>
+                            <a href="#a" title="maplink" aria-label="map-link"><i className="fa fa-map-marker fa-2x" aria-hidden="true"></i>.</a>
                         </div>
                     </div>
                 </div>
