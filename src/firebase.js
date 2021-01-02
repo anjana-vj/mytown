@@ -16,20 +16,3 @@ try {
 catch (e) {
     console.log(e);
 }
-
-/*
-var starCountRef = database.ref('all users/' + postId + '/starCount');
-starCountRef.on('value', (snapshot) => {
-    const data = snapshot.val();
-    updateStarCount(postElement, data);
-});
-
-function WriteData(path,data) {
-
-    return error_var;
-
-}
-
-export {WriteData}
-
-*/

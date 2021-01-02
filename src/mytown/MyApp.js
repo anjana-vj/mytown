@@ -2,7 +2,6 @@ import React from 'react';
 import './base.scss';
 import './../firebase';
 import firebase from 'firebase';
-import data from './mytown_data.json';
 import { NavLink } from 'react-router-dom'
 function MyAppHome() {
     return (

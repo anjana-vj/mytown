@@ -32,6 +32,7 @@ class CategoriesModule extends React.Component {
                 this.setState({
                     input_handlerCategoriesValue: ''
                 })
+                $('#AddCategoriesModuleForm').trigger("reset");
             }
         });
     }
@@ -114,7 +115,7 @@ class CategoriesModule extends React.Component {
 
                             </div>
                             <div className="col-md-5">
-                                <form className="form m-2" onSubmit={this.addCategories}>
+                                <form className="form m-2" id="AddCategoriesModuleForm" onSubmit={this.addCategories}>
                                     <h2>Add Category</h2>
                                     <div className="form-group">
                                         <input type="text" defaultValue={this.state.input_handlerCategoriesValue} onChange={this.input_handlerCategories} className="form-control" placeholder="category name" required />
@@ -160,6 +161,7 @@ class CitiesModule extends React.Component {
                 this.setState({
                     input_handlerCitiesValue: ''
                 })
+                $('#AddCitiesModuleForm').trigger("reset");
             }
         });
     }
@@ -242,7 +244,7 @@ class CitiesModule extends React.Component {
 
                             </div>
                             <div className="col-md-5">
-                                <form className="form m-2" onSubmit={this.addCities}>
+                                <form className="form m-2" id="AddCitiesModuleForm" onSubmit={this.addCities}>
                                     <h2>Add City</h2>
                                     <div className="form-group">
                                         <input type="text" defaultValue={this.state.input_handlerCitiesValue} onChange={this.input_handlerCities} className="form-control" placeholder="city name" required />
@@ -512,7 +514,7 @@ class EditBusinessDataForm extends React.Component {
                                     </div>
                                     <div className="form-group">
                                         <select className="custom-select" name="category" id="category" required defaultValue={this.state.business_data.category}>
-                                            <option key={0} value={this.state.business_data.category}>{this.state.business_data.category}</option>
+                                        <option key={0} value={this.state.business_data.category}>{this.state.business_data.category}</option>
                                             {this.state.categories.map((category) => {
                                                 return (
                                                     <option key={category.key} value={category.domain}>{category.domain}</option>
@@ -529,8 +531,8 @@ class EditBusinessDataForm extends React.Component {
 
                                     <div className="form-group">
                                         <select className="custom-select" name="city" required defaultValue={this.state.business_data.city}>
-                                            <option key={1} value={this.state.business_data.city}>{this.state.business_data.city}</option>
-
+                                        <option key={1} value={this.state.business_data.city}>{this.state.business_data.city}</option>
+                                            
                                             {this.state.cities.map((city) => {
                                                 return (
                                                     <option key={city.key} value={city.domain}>{city.domain}</option>
